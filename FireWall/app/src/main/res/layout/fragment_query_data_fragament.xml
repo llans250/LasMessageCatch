@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#fff"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+    <RelativeLayout
+        android:id="@+id/linn"
+        android:background="#009900"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+
+        android:paddingRight="10dp"
+        >
+        <TextView
+            android:id="@+id/query_title"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="黑名单管理"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:layout_toRightOf="@id/query_back"
+            />
+        <ImageButton
+            android:id="@+id/query_back"
+            android:src="@drawable/back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="fitXY"
+            android:layout_alignParentLeft="true"
+            android:background="#00000000"
+            android:onClick="addOnClick"
+            android:layout_centerInParent="true"
+            />
+
+        <EditText
+            android:id="@+id/query_edit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/query_title"
+            android:layout_toLeftOf="@id/query_querydata"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:hint="请输入你要查询的号码"
+            android:textSize="10dp"
+            android:paddingLeft="10dp"
+            android:background="#fff"/>
+
+        <ImageButton
+            android:id="@+id/query_querydata"
+            android:src="@drawable/add"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="fitXY"
+            android:layout_alignParentRight="true"
+            android:background="#00000000"
+            android:onClick="addOnClick"
+            android:layout_centerInParent="true"
+            />
+
+    </RelativeLayout>
+
+
+
+
+    <ListView
+        android:id="@+id/query_list"
+        android:layout_below="@id/linn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@null"
+        android:cacheColorHint="#00000000"
+        />
+
+
+</RelativeLayout>
